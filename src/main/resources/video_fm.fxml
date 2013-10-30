@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="371.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="SearchController">
+    <children>
+    <Button fx:id="search" defaultButton="true" onAction="#search" blendMode="DARKEN" layoutX="130.0" layoutY="73.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" text="Select file" />
+    <Label layoutX="47.0" layoutY="43.0" text="Select video file to set water mark">
+      <font>
+        <Font name="System Bold" size="15.0" />
+      </font>
+    </Label>
+    <Label layoutX="75.0" layoutY="108.0" text="Choose water mark location">
+      <font>
+        <Font size="15.0" />
+      </font>
+    </Label>
+    <ChoiceBox layoutX="130.0" layoutY="135.0" minHeight="18.0" prefHeight="18.0" prefWidth="100.0">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Up-Left" />
+          <String fx:value="Up-Center" />
+          <String fx:value="Up-Right" />
+          <String fx:value="Center-Right" />
+          <String fx:value="Center" />
+          <String fx:value="Center-Right" />
+          <String fx:value="Bottom-Right" />
+          <String fx:value="Bottom-Center" />
+          <String fx:value="Bottom-Left" />
+        </FXCollections>
+      </items>
+    </ChoiceBox>
+  </children>
+</AnchorPane>

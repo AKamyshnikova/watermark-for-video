@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<StackPane id="Pane" prefHeight="400" prefWidth="600" xmlns:fx="http://javafx.com/fxml" fx:controller="wm.SearchController">
+    <children>
+        <Button fx:id="search" defaultButton="true" onAction="#search" text="Search"  />
+    </children>
+</StackPane>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="fileProvider" class="watermarking.providers.FileImageProvider" scope="prototype"/>
+    <bean id="bufferedImageProvider" class="watermarking.providers.BufferedImageProvider" scope="prototype" />
+    <bean id="fileBasedCore" class="watermarking.Core">
+        <property name="baseImageProvider" ref="bufferedImageProvider"/>
+        <property name="watermarkImageProvider" ref="fileProvider"/>
+    </bean>
+    <bean id="formController" class="watermarking.controllers.FormController">
+        <property name="stage">
+            <util:constant static-field="watermarking.MainApp.stage"/>
+        </property>
+        <property name="core" ref="fileBasedCore"/>
+    </bean>
+
+</beans>
